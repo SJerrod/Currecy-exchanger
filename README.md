@@ -23,9 +23,9 @@
 | Will take in User input and return as is | Hello | Hello |
 | Will take in a value input | 3 | n/a |
 | Will take in a country and fetch the API for it | USA | USD |
-| Will take in second country to return the exchange rate for | Australia/AUD | 1.4817 |
-| Will multiply the first by the second and return the exchanged value | (USD*AUD) 3*1.4817= | 4.4451 |
-| Will round amount to nearest actual value 0.00 format | 4.4451 | 4.45 |
+| Will take in second country to return the exchange rate for | Australia/AUD | 1.3739 |
+| Will multiply the first by the second and return the exchanged value | (USD*AUD) 3*1.3739= | 4.1217 |
+| Will round amount to nearest actual value 0.00 format | 4.1217 | 4.12 |
 
 ## Bugs
 
