@@ -1,8 +1,8 @@
 {
-  "name": "template",
+  "name": "currency-exchanger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Exchanges currency from one country to the other",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
     "start": "npm run build & webpack-dev-server --open --mode development",
@@ -16,7 +16,7 @@
     ]
   },
   "keywords": [],
-  "author": "",
+  "author": "Jerrod Styrk",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
