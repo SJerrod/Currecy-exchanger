@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Currency Converter</title>
 </head>
 <body>
   <div class="container">
     <h4>What are you buying?</h4>
     <label for="money">Convert</label>
-    <input type="text" placeholder="Amount to convert" required>
+    <input class="money" type="text" placeholder="Amount to convert" required>
     <label for="country1">From</label>
-    <select name="country1" id="country1">
-      <option value="USD">United States Dollar</option>
+    <select id="country1">
+      <option name="country1" value="USD">United States Dollar</option>
     </select>
     <label for="country2">to the </label>
-    <select name="country2" id="country2">
-      <option value="AUD">Australian Dollar</option>
+    <select id="country2">
+      <option name="country2" value="AUD">Australian Dollar</option>
     </select>
-    <button type="button" class="btn btn-outline-dark">Convert Now!</button>
+    <button id="convert" type="button" class="btn btn-outline-dark">Convert Now!</button>
   </div>
   <div class="container">
     <h4>Your Conversions!</h4>
