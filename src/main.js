@@ -10,10 +10,16 @@ function showExchange(response, country1Name, country2, country2Name, amount) {
     alert("You must enter a number larger then 0.");
     return false;
   } else if (response.base_code) {
-    $(".show").append(`<li>${amount} of ${country1Name} currency is worth</li>`);
     let convertBy = 0;
     let symbol = [];
     switch (country2) {
+    case (""):
+      alert("This currency conversion doesnt exist yet");
+      return false;
+    case ("USD"):
+      convertBy += `${response.conversion_rates.USD}`;
+      symbol.push("$");
+      break;
     case ("AUD"):
       convertBy += `${response.conversion_rates.AUD}`;
       symbol.push("$");
@@ -35,8 +41,8 @@ function showExchange(response, country1Name, country2, country2Name, amount) {
       symbol.push("¥");
       break;
     }
+    $(".show").append(`<li>${amount} of ${country1Name} currency is worth</li>`);
     let total = (convertBy*amount).toFixed(2);
-    console.log(symbol);
     $(".show").append(`${symbol[0]}${total} in ${country2Name}.`);
   } else {
     $(".show").append(`There was an error: ${response.message}`);
