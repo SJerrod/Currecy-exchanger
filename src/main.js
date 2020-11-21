@@ -29,6 +29,7 @@ function showExchange(response, country1, country1Name, country2, country2Name, 
       symbol1.push("£");
       break;
     case ("JPY"):
+    case ("CNY"):
       symbol1.push("¥");
       break;
     case ("RUB"):
@@ -37,8 +38,16 @@ function showExchange(response, country1, country1Name, country2, country2Name, 
     case ("AED"):
       symbol1.push("د.إ");
       break;
+    case ("INR"):
+      symbol1.push("₹");
+      break;
+    case ("KRW"):
+      symbol1.push("₩");
+      break;
+    case ("BRL"):
+      symbol1.push("R$");
+      break;
     }
-    
     switch (country2) {
     case (""):
       alert("This currency conversion doesnt exist yet");
@@ -74,6 +83,22 @@ function showExchange(response, country1, country1Name, country2, country2Name, 
     case ("AED"):
       convertBy += `${response.conversion_rates.AED}`;
       symbol2.push("د.إ");
+      break;
+    case ("INR"):
+      convertBy += `${response.conversion_rates.INR}`;
+      symbol2.push("₹");
+      break;
+    case ("KRW"):
+      convertBy += `${response.conversion_rates.KRW}`;
+      symbol2.push("₩");
+      break;
+    case ("CNY"):
+      convertBy += `${response.conversion_rates.CNY}`;
+      symbol2.push("¥");
+      break;
+    case ("BRL"):
+      convertBy += `${response.conversion_rates.BRL}`;
+      symbol2.push("R$");
       break;
     }
     $(".show").append(`<li>${symbol1[0]}${amount} of ${country1Name} currency is worth</li>`);
